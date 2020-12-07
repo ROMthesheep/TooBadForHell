@@ -1,3 +1,16 @@
+
+*{
+  font-size: 1.3em;
+}
+.cardText{
+  font-family: titleFont;
+  
+}
+img{
+  margin: 5px;
+}
+
+
 #container {
   text-align: center;
 
@@ -30,6 +43,7 @@
   margin: 5%;
 }
 #respuestas{
+ 
   display: grid;
   grid-template: 250px 250px / 3fr 3fr 3fr 1fr 3fr 3fr 3fr;
 }

@@ -4,20 +4,23 @@
   <div id="canvasContainer" class="canvas-container"></div><br>
 
   
-  <h1 id="title">Bienvenido a Too Good For Hell</h1>
+  
 
   <div id="respuestas">
     <ion-card id="respuesta1" button (click)="createRoom()">
-      <h1>Crear sala!</h1>
+      <ion-card-title class="cardText">Crear sala!</ion-card-title>
+      <img src="../../assets/38352995-62402498-38b5-11e8-859b-75674942c1f9.png" width="50%" alt="">
     </ion-card>
-    <ion-card id="respuesta2" button (click)="JoinRoom()">
-      <h1>Unirme a sala!</h1>
-      
+    <ion-card id="respuesta2"  button (click)="JoinRoom()">
+      <ion-card-title class="cardText">Unirme a sala!</ion-card-title>
+      <img src="../../assets/door-opened.png" width="50%" alt="">
     </ion-card>
  
   <ion-card id="respuesta3" button (click)="localGame()">
     
-    <h1>Juego Local!</h1>
+    <ion-card-title class="cardText">Juego Local!</ion-card-title>
+    <img src="../../assets/local.png" width="50%" alt="">
+    
   </ion-card>
   </div>
   

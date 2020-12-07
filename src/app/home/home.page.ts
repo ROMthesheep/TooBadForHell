@@ -17,11 +17,17 @@ export class HomePage {
   pregunta: string;
   gameready: Boolean;
   
+  titulo; diablillo;
+
   constructor(private el: ElementRef, private alertCtrl: AlertController, private router: Router) { }
 
   ngOnInit() {
     
+
     const p5obj = new p5((p) => {
+      this.titulo = p.loadImage('../../assets/Too bad fot hell.png')
+      this.diablillo = p.loadImage('../../assets/smiling-face-with-horns_1f608.png')
+      
       p.setup = () => {
         this.setup(p);
       };
@@ -44,17 +50,28 @@ export class HomePage {
   setup(p) {
     const c = document.querySelector("#canvasContainer");
     p.createCanvas(this.canvasSizeX, this.canvasSizeY).parent(c);
-
+    
     
   }
   draw(p) {
-    let inpText = "Too bad for hell";
+    
+    let textx;
+    let texty = p.sin(p.frameCount*0.02)*50;
     p.noStroke();
     p.textSize(50);
     p.textAlign(p.CENTER);
     p.background(256)
     p.translate(this.canvasSizeX / 2, this.canvasSizeY / 2);
-    p.text("Too bad for hell", 0, 0)
+    p.image(this.diablillo, +40, texty*0.5 -80)
+    p.image(this.titulo, -150, texty - 50)
+    
+    // p.text("Too bad for hell", 0, texty)
+    p.fill(p.sin(p.frameCount * 0.05) * 250, p.sin(p.frameCount * 0.05), p.sin(p.frameCount * 0.05))
+    
+    
+    
+    
+  
 
   }
   setup2(p) {

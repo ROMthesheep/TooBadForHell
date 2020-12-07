@@ -1,3 +1,16 @@
+*{
+  font-family: titleFont;
+}
+
+#botonReset{
+  font-size: 2em
+}
+
+#lapregunta{
+  font-family: titleFont;
+  font-size: 2em;
+}
+
 #respuestas{
   display: grid;
   grid-template: 250px / 8fr 2fr 8fr;
