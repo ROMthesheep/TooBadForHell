@@ -1,0 +1,95 @@
+<ion-content class="ion-padding ion-text-center">  
+  <h1 *ngIf="!dataready">Completa los jugadores y podremos comenzar</h1>
+
+
+
+
+
+
+  <div *ngIf="!gameready && dataready" id="GameOff">
+    <h3>Ya casi esta todo listo...</h3>
+    <h1>Necesito que se ponga al telefono tu amigo <strong>{{playertarget.userName}}</strong> y que me formule una pregunta para vosotros</h1>
+    <br>
+    <ion-input type="text" id="preguntaInput" [(ngModel)]="preguntaInput" placeholder="cres que X ...."></ion-input>
+    <ion-button (click)="addPregunta()" expand="block"  shape="round">
+      Añadir pregunta
+    </ion-button>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div *ngIf="gameready && dataready" id="gameOn">
+  <h6>Le toca contestar a...</h6>
+  <div *ngIf="seguirRotando && !(resultados.length>0)">
+  <h2>{{playerPlaying.userName.trim()}},</h2>
+  <h1>Crees que {{playertarget.userName.trim()}},{{preguntaInput}}</h1>
+  </div>
+  <div *ngIf="!seguirRotando">
+    <h2>{{playertarget.userName.trim()}},Te toca responder...</h2>
+  <h1>{{playertarget.userName.trim()}} {{preguntaInput}}</h1>
+  </div>
+  <div *ngIf="resultados.length>0">
+    <ion-item *ngFor="let res of resultados">
+      <ion-badge slot="start" *ngIf="res.slice(-9)=='perdido!!'">❌</ion-badge>
+      <ion-badge slot="start" *ngIf="res.slice(-9)=='a ganado!'">✔️</ion-badge>
+      <ion-label>{{res}}</ion-label>
+    </ion-item>
+    <ion-button (click)="reset()" expand="block" fill="clear" shape="round">
+      Jugar otra ronda
+    </ion-button>
+  </div>
+<br>
+  <div id="respuestas" *ngIf="seguirRotando">
+    <ion-card id="respuesta1" button (click)="cardClick('si')">
+      <h1 class="respuesta">Si</h1>
+      
+    </ion-card>
+    <ion-card id="respuesta2" button (click)="cardClick('no')">
+      <h1  class="respuesta">No</h1>
+    </ion-card>
+    
+  </div>
+  <div id="respuestas" *ngIf="!seguirRotando && !(resultados.length>0)">
+    <ion-card id="respuesta1" button (click)="resolucion('si')">
+      <h1 class="respuesta">Si</h1>
+      
+    </ion-card>
+    <ion-card id="respuesta2" button (click)="resolucion('no')">
+      <h1  class="respuesta">No</h1>
+    </ion-card>
+    
+  </div>
+  <!-- <h3>{{timer}}</h3> -->
+
+</div>
+
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button *ngIf="players.length>0">
+        <ion-icon name="save-outline" (click)="savePlayers()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button *ngIf="players.length<=0">
+        <ion-icon name="download-outline" (click)="loadplayers()"></ion-icon>
+      </ion-fab-button>
+      
+    </ion-fab>
+
+    
+    <ion-item class=" playerLabels" *ngFor="let p of players">
+      <ion-avatar slot="start">
+        <img src={{(p.pic)}}>
+      </ion-avatar>
+      <ion-label>{{p.userName}}</ion-label>
+      <ion-note  slot="end" *ngIf="p.seleccion!=null">ha dicho que {{p.seleccion}}</ion-note>
+      <ion-note  slot="end">puntos: {{p.puntos}}</ion-note>
+    </ion-item>
+  
+</ion-content>

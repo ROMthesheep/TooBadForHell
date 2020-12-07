@@ -1,0 +1,23 @@
+#respuestas{
+  display: grid;
+  grid-template: 250px / 8fr 2fr 8fr;
+}
+#respuesta1{
+  grid-column: 1;
+  transform: rotateZ(10deg * -1);
+}
+#respuesta2{
+  grid-column: 3;
+  transform: rotateZ(10deg);
+}
+.respuesta{
+  
+  margin: 5px;
+  
+}
+.playerLabels{
+  margin: 10%;
+}
+#preguntaInput{
+  font-size: 3em;
+}
