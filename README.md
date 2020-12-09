@@ -9,7 +9,7 @@ Al introducir la pregunta el resto de jugadores deben de uno en uno responder la
 
 
 # La pantalla de juego:
-![](https://gyazo.com/0fecddd0267e9ef411b074188829b781)
+![](https://gyazo.com/0fecddd0267e9ef411b074188829b781.png)
 
 
 # La pantalla de resultados:
