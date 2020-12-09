@@ -5,7 +5,7 @@ El juego se basa en que un jugador hace una pregunta que no sabe a quien va a ir
 Al introducir la pregunta el resto de jugadores deben de uno en uno responder la pregunta teniendo en cuenta hacia quien va dirigida. Cuando todos hayan respondido el jugador al que iba la pregunta dirigida resuelve lña pregunta y en funcion si han acertado o no los demas jugadores obtienen puntos.
 
 # El menu principal:
-![](https://i.gyazo.com/33aae577f564cb90d38a8b9dd14cc4ae.png)
+![](https://i.gyazo.com/f4975bd6ce5855b8d2873530c0a4bbb0.png)
 
 
 # La pantalla de juego:
