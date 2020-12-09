@@ -2,7 +2,9 @@
 
 Too bad for hell es un party game que se basa en como de bien conoces a tus amigos y como de bien pueden engañarles.
 El juego se basa en que un jugador hace una pregunta que no sabe a quien va a ir dirigida, debe ser una pregunta cerrada, de si o no.
-Al introducir la pregunta el resto de jugadores deben de uno en uno responder la pregunta teniendo en cuenta hacia quien va dirigida. Cuando todos hayan respondido el jugador al que iba la pregunta dirigida resuelve lña pregunta y en funcion si han acertado o no los demas jugadores obtienen puntos.
+Al introducir la pregunta el resto de jugadores deben de uno en uno responder la pregunta teniendo en cuenta hacia quien va dirigida. Cuando todos hayan respondido el jugador al que iba la pregunta dirigida resuelve la pregunta y en funcion si han acertado o no los demas jugadores obtienen puntos.
+
+Permite rondas infinitas y guardar y cargar un set de jugadores
 
 # El menu principal:
 ![](https://i.gyazo.com/f4975bd6ce5855b8d2873530c0a4bbb0.png)
